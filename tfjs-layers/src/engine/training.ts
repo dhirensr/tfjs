@@ -167,8 +167,8 @@ export function standardizeInputData(
         const refDim = shapes[i][j];
         if (refDim != null && refDim >= 0 && dim !== refDim) {
           throw new ValueError(
-              `Error when checking ${exceptionPrefix}: expected ${names[i]} ` +
-              `to have shape [${shapes[i]}], but got array with shape ` +
+              `${names[i]} is expected to have an input shape of [${shapes[i]}] ` +
+              `but the output of previous_layer has an output shape of ` +
               `[${array.shape}].`);
         }
       }
